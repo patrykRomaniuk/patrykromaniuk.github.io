@@ -513,22 +513,23 @@
   * .my-work .work-section .project .project-text-section .buttons .button {
     width: 130px;
     margin: .5em 0;
-    height: 50px;
+    height: 70px;
   }
 }
 
 @media (max-width: 1024px) {
   * .my-work .work-section .project .project-text-section .buttons .button {
-    width: 140px;
+    font-size: .65em;
+    width: 100px;
     height: 50px;
   }
 }
 
 @media (min-width: 1024px) {
   * .my-work .work-section .project .project-text-section .buttons .button {
-    width: 180px;
+    width: 28%;
     height: 50px;
-    font-size: 1em;
+    font-size: .825em;
   }
 }
 
@@ -858,7 +859,7 @@
 
 @media (min-width: 1024px) {
   * .footer-wrapper .footer .contact-section-wrapper .contact-section .main-contact-section-header {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
