@@ -62,11 +62,12 @@ $textMuted: #6c757d;
             top: 0%;
             width: 100vw;
             height: 100vh;
-            background: url('pexels-photo-218863.jpeg');
-            background-repeat: no-repeat;
+            background: url('./land.png') no-repeat fixed 85% / cover;
             -webkit-filter: grayscale(7%) brightness(24%) contrast(112%);
-            background-size: cover;
             z-index: -1;
+            @media(min-width: 1100px){
+                background: url('./land.png') no-repeat fixed center / cover;
+            }
         }
     }
 
