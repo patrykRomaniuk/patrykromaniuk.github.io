@@ -204,26 +204,32 @@ $textMuted: #6c757d;
             justify-content: center;
             width: 50vw !important;
         }
-        div{
-            text-align: center;
-            .landing-page-top{
-                font-size: 25px;
-                font-style: italic;
-                padding-right: 10px;
-                margin-bottom: 25px;
-                font-family: 'Roboto',sans-serif;
-                color: $light;
-                @media(min-width: 1024px){
-                    font-size: 35px;
-                }
+        .marginText{
+            margin-bottom: 4em;
+            @media(min-width: 1024px){
+                margin-bottom: 0;
             }
-            .landing-page-middle{
-                font-family: 'Montserrat',sans-serif;
-                font-weight: 700;
-                font-size: 35px;
-                color: $white;
-                @media(min-width: 1024px){
-                    font-size: 45px;
+            div{
+                text-align: center;
+                .landing-page-top{
+                    font-size: 25px;
+                    font-style: italic;
+                    padding-right: 10px;
+                    margin-bottom: 25px;
+                    font-family: 'Roboto',sans-serif;
+                    color: $light;
+                    @media(min-width: 1024px){
+                        font-size: 35px;
+                    }
+                }
+                .landing-page-middle{
+                    font-family: 'Montserrat',sans-serif;
+                    font-weight: 700;
+                    font-size: 35px;
+                    color: $white;
+                    @media(min-width: 1024px){
+                        font-size: 45px;
+                    }
                 }
             }
         }
