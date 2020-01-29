@@ -65,7 +65,7 @@ $textMuted: #6c757d;
             background: url('./land.png') no-repeat fixed 85% / cover;
             -webkit-filter: grayscale(44%) brightness(75%) contrast(112%);
             z-index: -1;
-            @media(min-width: 1100px){
+            @media(min-width: 1500px){
                 background: url('./land.png') no-repeat fixed center / cover;
             }
         }
@@ -106,7 +106,9 @@ $textMuted: #6c757d;
         .navbar-links-section{
             overflow: hidden;
             display: none;
+            margin-left: 5em;
             @media(min-width: 1024px){
+                margin-left: 0;
                 display: block;
             }
             ul{
@@ -115,7 +117,7 @@ $textMuted: #6c757d;
                 align-items: center;
 
                 .navbar-text{
-                    font-size: 20px;
+                    font-size: 1.2em;
                     font-weight: 400;
                     color: $light;
                     letter-spacing: 1px;
