@@ -72,7 +72,7 @@
   width: 100vw;
   height: 100vh;
   background: url("./land.png") no-repeat fixed 85%/cover;
-  -webkit-filter: grayscale(7%) brightness(24%) contrast(112%);
+  -webkit-filter: grayscale(44%) brightness(75%) contrast(112%);
   z-index: -1;
 }
 
@@ -261,9 +261,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -271,6 +271,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  * .landing-page-section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50vw !important;
+  }
 }
 
 * .landing-page-section div {
@@ -288,20 +297,20 @@
 
 @media (min-width: 1024px) {
   * .landing-page-section div .landing-page-top {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
 * .landing-page-section div .landing-page-middle {
   font-family: 'Montserrat',sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 35px;
   color: #fff;
 }
 
 @media (min-width: 1024px) {
   * .landing-page-section div .landing-page-middle {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 
