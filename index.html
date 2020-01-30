@@ -47,7 +47,7 @@
                     </li>
 
                     <li class="navbar-link">
-                        <span class="nav-link-skills navbar-text">Youtube</span>
+                        <span class="nav-link-youtube navbar-text">Youtube</span>
                     </li>
                     
                     <div class="contact-link">
@@ -66,7 +66,7 @@
                 <li class="sidebar-link-about_me">O mnie</li>
                 <li class="sidebar-link-projects">Projekty</li>
                 <li class="sidebar-link-skills">Umiejętności</li>
-                <li class="sidebar-link-skills">Youtube</li>
+                <li class="sidebar-link-youtube">Youtube</li>
                 <li class="sidebar-contact-link">Kontakt</li>
             </ul>
         </div>
@@ -292,13 +292,13 @@
             <span>
                 Od jakiegoś czasu zacząłem regularnie prowadzić kanał na youtubie, na którym przekazuję moją wiedzę.
             </span>
-            <div class="youtubeIcon">
+            <a href="https://www.youtube.com/channel/UC5gUdC4ixO1qq8Q2yaQsdAw?view_as=subscriber" target="_blank" class="youtubeIcon">
                 <span>Sprawdź</span> <i class="fab fa-youtube"></i>
-            </div>
+            </a>
         </div>
 
     </section>
-
+    
     <footer class="footer-wrapper">
         <div class="footer">
             <div class="contact-section-wrapper">
@@ -336,12 +336,14 @@
     </footer>
 
     <script>
+        const body = document.querySelector('body');
         const navbar = document.querySelector('.navbar');
         const landingPageWrapper = document.querySelector('.landing-page-wrapper');
         const navLinkAboutMe = document.querySelector('.nav-link-about_me');
         const navLinkProjects = document.querySelector('.nav-link-projects');
         const navLinkSkills = document.querySelector('.nav-link-skills');
         const navLinkContact = document.querySelector('.contact-link');
+        const navLinkYoutube = document.querySelector('.nav-link-youtube');
 
         const sidebar = document.querySelector('.sidebar');
         const sidebarIcon = document.querySelector('.sidebar-icon');
@@ -349,6 +351,7 @@
         const sidebarAboutMe = document.querySelector('.sidebar-link-about_me');
         const sidebarSkills = document.querySelector('.sidebar-link-skills');
         const sidebarProjects = document.querySelector('.sidebar-link-projects');
+        const sidebarYoutube = document.querySelector('.sidebar-link-youtube');
         const sidebarContact= document.querySelector('.sidebar-contact-link');
 
         window.onscroll = function() {
@@ -363,6 +366,7 @@
             sidebar.style.zIndex = "-1";
             sidebar.style.width = "0vw";
             sidebar.style.height = "0vh";
+            body.style.overflow = "scroll";
         }
 
         const scrollToElementFunction = scrollToComponent => {
@@ -375,12 +379,14 @@
             sidebar.style.zIndex = "4";
             sidebar.style.width = "110vw";
             sidebar.style.height = "110vh";
+            body.style.overflow = "hidden";
         });
 
         //Navbar Links Scroll Event Listeners
         navLinkAboutMe.addEventListener('click',() => scrollToElementFunction('about-me-section'));
         navLinkProjects.addEventListener('click', () => scrollToElementFunction('scroll-to-project'));
         navLinkSkills.addEventListener('click',() => scrollToElementFunction('second-skill-section'));
+        navLinkYoutube.addEventListener('click',() => scrollToElementFunction('youtube-section'));
         navLinkContact.addEventListener('click',() => scrollToElementFunction('footer'));
 
         //Sidebar Links Scroll
@@ -399,6 +405,11 @@
 
         sidebarSkills.addEventListener('click',() => {
             scrollToElementFunction('mobile-scroll-to-skills');
+            removeSidebar();
+        });
+
+        sidebarYoutube.addEventListener('click',() => {
+            scrollToElementFunction('youtube-section');
             removeSidebar();
         });
 
