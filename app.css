@@ -400,10 +400,6 @@
   margin-bottom: 8em;
 }
 
-* .my-work .work-section:last-child {
-  margin-bottom: 0em;
-}
-
 * .my-work .work-section .project {
   display: -ms-grid;
   display: grid;
@@ -418,7 +414,7 @@
 
 @media (max-width: 768px) {
   * .my-work .work-section .project {
-    height: 120vh;
+    height: 140vh;
     -ms-grid-rows: 50% 50%;
         grid-template-rows: 50% 50%;
   }
@@ -441,9 +437,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -489,29 +484,20 @@
 }
 
 * .my-work .work-section .project .project-text-section .buttons {
-  padding-top: .5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   width: 100%;
-  height: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 50%;
 }
 
-@media (max-width: 368px) {
+@media (min-width: 1024px) {
   * .my-work .work-section .project .project-text-section .buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin-top: 3em;
+    height: 10%;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -525,37 +511,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: .8em;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   color: #000;
+  margin: .5em;
+  font-size: .875em;
   font-family: 'Montserrat',sans-serif;
   border: 1px solid black;
   text-decoration: none;
-}
-
-@media (max-width: 368px) {
-  * .my-work .work-section .project .project-text-section .buttons .button {
-    width: 130px;
-    margin: .5em 0;
-    height: 70px;
-  }
-}
-
-@media (max-width: 1024px) {
-  * .my-work .work-section .project .project-text-section .buttons .button {
-    font-size: .65em;
-    width: 100px;
-    height: 50px;
-  }
-}
-
-@media (min-width: 1024px) {
-  * .my-work .work-section .project .project-text-section .buttons .button {
-    width: 28%;
-    height: 50px;
-    font-size: .825em;
-  }
 }
 
 * .my-work .work-section .project .project-text-section .buttons .button:hover {
@@ -865,6 +828,15 @@
 }
 
 * .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   padding-top: 4em;
   background: #f4f4f4;
