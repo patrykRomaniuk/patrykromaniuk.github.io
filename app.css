@@ -825,6 +825,8 @@
 }
 
 * .youtube-section .youtubeTextSection .youtubeIcon {
+  color: #fff;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

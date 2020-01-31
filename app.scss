@@ -534,8 +534,10 @@ $textMuted: #6c757d;
             span{
                 text-align: center;
                 padding: 1.25em 0;
-            }
+            }         
             .youtubeIcon{
+                color: #fff;
+                text-decoration: none;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
