@@ -305,6 +305,14 @@
   margin-bottom: 25px;
   font-family: 'Roboto',sans-serif;
   color: #f8f9fa;
+  text-shadow: 2px 2px 1px #000000;
+}
+
+@media (min-width: 1500px) {
+  * .landing-page-section .marginText div .landing-page-top {
+    text-shadow: none;
+    color: #3340ff;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -318,11 +326,19 @@
   font-weight: 700;
   font-size: 35px;
   color: #fff;
+  text-shadow: 2px 2px 1px #000000;
 }
 
 @media (min-width: 1024px) {
   * .landing-page-section .marginText div .landing-page-middle {
     font-size: 45px;
+  }
+}
+
+@media (min-width: 1500px) {
+  * .landing-page-section .marginText div .landing-page-middle {
+    text-shadow: none;
+    color: #3340ff;
   }
 }
 
