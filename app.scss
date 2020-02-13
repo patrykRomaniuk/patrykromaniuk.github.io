@@ -249,8 +249,8 @@ $textMuted: #6c757d;
 
     .about-me-section{
         width: 100vw;
-        height: 125vh;
-        padding: 4em 0;
+        height: 120vh;
+        padding-top: 3em;
         background: #f4f4f4;
         display: flex;
         justify-content: center;
@@ -262,14 +262,13 @@ $textMuted: #6c757d;
         @media(min-width: 1024px){
             height: 100vh;
         }
-        .about-me-header{
-            padding: 1em 0;           
+        .about-me-header{          
             overflow-y: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .about-me-under-section{
+      /*  .about-me-under-section{
             width: 80%;
             height: 60%;
             display: flex;
@@ -279,7 +278,39 @@ $textMuted: #6c757d;
                 width: 100%;
                 height: 100%;
             }
+        }*/
+
+        .splitTwice{
+            width: 80%;
+            height: 60%;
+            display: grid;
+            grid-template-columns: 1fr;
+            @media(min-width: 1024px){
+                grid-template-columns: 1fr 1fr;
+            }
+            .my_image{
+                width: 90%;
+                height: 100%;
+                background: url('./n.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            .text_about_me{
+                font-weight: 500;
+                font-size: 1.3em;
+                font-family: 'Roboto',sans-serif;
+                @media(min-width: 1024px){
+                    font-size: 1.8em;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
         }
+
     }
 
     .my-work{
