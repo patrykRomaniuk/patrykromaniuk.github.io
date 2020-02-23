@@ -342,6 +342,7 @@
 
     <script>
         const body = document.querySelector('body');
+        const html = document.querySelector('html');
         const navbar = document.querySelector('.navbar');
         const landingPageWrapper = document.querySelector('.landing-page-wrapper');
         const navLinkAboutMe = document.querySelector('.nav-link-about_me');
@@ -372,6 +373,7 @@
             sidebar.style.width = "0vw";
             sidebar.style.height = "0vh";
             body.style.overflow = "scroll";
+            html.style.overflow = "scroll";
         }
 
         const scrollToElementFunction = scrollToComponent => {
@@ -385,6 +387,7 @@
             sidebar.style.width = "110vw";
             sidebar.style.height = "110vh";
             body.style.overflow = "hidden";
+            html.style.overflow = "hidden";
         });
 
         //Navbar Links Scroll Event Listeners
